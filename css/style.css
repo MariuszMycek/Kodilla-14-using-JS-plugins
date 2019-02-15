@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.carousel-cell {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  /* full width */
+  height: 50vh;
+  /* height of carousel */
+  min-height: 250px;
+  margin-right: 10px;
+  background-position: center;
+  background-size: cover;
+  -ms-flex-align: end;
+      align-items: flex-end;
+}
+
+.container {
+  position: relative;
+  bottom: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carousel-cell-text {
+  margin: 0 15px;
+  color: white;
+  text-shadow: 1px 1px 4px #000;
+}
+
+@media (min-width: 768px) {
+  .carousel-cell-text {
+    margin: 0 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-cell-text {
+    margin: 0;
+  }
+}
+
+.button {
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgba(199, 236, 238, 0.8);
+  box-shadow: none;
+}
+
+.button:focus {
+  box-shadow: none;
+}
+
+.progress-bar {
+  width: 0;
+  height: 20px;
+  background: #333;
+}
