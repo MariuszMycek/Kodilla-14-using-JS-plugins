@@ -11,7 +11,7 @@
     "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "build": "npm-run-all build:* test",
-    "build-dev": "npm-run-all build:clean build:sass build:autoprefixer test",
+    "build-dev": "npm-run-all build:clean build:sass-expanded build:autoprefixer test",
     "build:clean": "rimraf css/* && rimraf docs/*",
     "build:sass-expanded": "node-sass --output-style expanded -o css sass",
     "build:autoprefixer": "autoprefixer-cli css/style.css",
