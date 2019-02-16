@@ -20,28 +20,39 @@ body {
 
 .container {
   position: relative;
-  bottom: 50px;
+  bottom: 20px;
   width: 100%;
-  max-width: 1200px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
-.carousel-cell-text {
+@media (min-width: 768px) {
+  .container {
+    bottom: 50px;
+    max-width: 1200px;
+  }
+}
+
+.text-wrapper {
   margin: 0 15px;
   color: white;
   text-shadow: 1px 1px 4px #000;
 }
 
 @media (min-width: 768px) {
-  .carousel-cell-text {
+  .text-wrapper {
     margin: 0 35px;
   }
 }
 
 @media (min-width: 1200px) {
-  .carousel-cell-text {
+  .text-wrapper {
     margin: 0;
   }
+}
+
+.text-wrapper p {
+  margin-left: 45px;
 }
 
 .button {

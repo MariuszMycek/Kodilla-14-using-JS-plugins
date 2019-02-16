@@ -19,21 +19,30 @@ body {
 
 .container {
     position: relative;
-    bottom: 50px;
+    bottom: 20px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 600px;
     margin: 0 auto;
+    @include breakpoint (md) {
+        bottom: 50px;
+        max-width: 1200px;
+
+    }
 }
 
-.carousel-cell-text {
+.text-wrapper {
     margin: 0 15px;
     color: white;
     text-shadow: 1px 1px 4px #000;
+    
     @include breakpoint (md) {
         margin: 0 35px;
     }
     @include breakpoint(xl) {
         margin: 0;
+    }
+    p {
+        margin-left: 45px;
     }
 }
 

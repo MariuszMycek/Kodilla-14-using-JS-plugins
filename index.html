@@ -10,65 +10,64 @@
   </head>
   <body>
     <button type="button" class="button js--restart-button">Restart</button>
-    <div class="main-carousel">
-      <div
-        id="Alpine-forest"
-        class="carousel-cell cell1"
-        style="background-image:url(assets/images/las1.jpg)"
-      >
-        <div class="container">
-          <p class="carousel-cell-text">Alpine forest - a lot of fresh air</p>
-        </div>
-      </div>
-
-      <div
-        id="Bieszczady"
-        class="carousel-cell"
-        style="background-image:url(assets/images/las2.jpg)"
-      >
-        <div class="container">
-          <p class="carousel-cell-text">
-            Hills of Bieszczady - wild and beautiful
-          </p>
-        </div>
-      </div>
-
-      <div
-        id="Romanian-Carpathians"
-        class="carousel-cell"
-        style="background-image:url(assets/images/las3.jpg)"
-      >
-        <div class="container">
-          <p class="carousel-cell-text">
-            Romanian Carpathians - home of Dracula
-          </p>
-        </div>
-      </div>
-
-      <div
-        id="Pyrenees"
-        class="carousel-cell"
-        style="background-image:url(assets/images/las4.jpg)"
-      >
-        <div class="container">
-          <p class="carousel-cell-text">The Pyrenees - spanish mountains</p>
-        </div>
-      </div>
-
-      <div
-        id="Tatras"
-        class="carousel-cell"
-        style="background-image:url(assets/images/las5.jpg)"
-      >
-        <div class="container">
-          <p class="carousel-cell-text">Polish Tatras - bear? what bear?...</p>
-        </div>
-      </div>
-    </div>
+    <div class="main-carousel" id="results"></div>
     <div class="progress-bar"></div>
+
+    <script id="template-slide" type="x-tmpl-mustache">
+
+      <div
+        id={{ id }}
+        class="carousel-cell"
+        style="background-image:url( {{ image }} )"
+      >
+        <div class="container">
+          <div class="text-wrapper">
+          <h3 class="carousel-cell-text">{{ title }}</h3>
+          {{{ description }}}
+          </div>
+        </div>
+      </div>
+      
+    </script>
+
+    <script>
+      var slideData = [
+        {
+          id: "Alpine-forest",
+          image: "assets/images/las1.jpg",
+          title: "Alpine Forest",
+          description: "<p>a lot of fresh air</p>"
+        },
+        {
+          id: "Bieszczady",
+          image: "assets/images/las2.jpg",
+          title: "Bieszczady",
+          description: "<p>wild and beautiful</p>"
+        },
+        {
+          id: "Romanian-Carpathians",
+          image: "assets/images/las3.jpg",
+          title: "Romanian Carpathians",
+          description: "<p>home of Dracula</p>"
+        },
+        {
+          id: "Pyrenees",
+          image: "assets/images/las4.jpg",
+          title: "Pyrenees",
+          description: "<p>spanish mountains</p>"
+        },
+        {
+          id: "Tatras",
+          image: "assets/images/las5.jpg",
+          title: "Polish Tatras",
+          description: "<p>bear? what bear?...</p>"
+        }
+      ];
+    </script>
 
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>
+    <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
