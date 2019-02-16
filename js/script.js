@@ -1,5 +1,5 @@
 "use strict";
-
+// Mustache.js - generating slides using template
 (function() {
   var templateSlide = document.getElementById("template-slide").innerHTML;
 
@@ -11,7 +11,7 @@
   }
 
   var results = document.getElementById("results");
- 
+
   results.insertAdjacentHTML("beforeend", generatedSlide);
 })();
 
