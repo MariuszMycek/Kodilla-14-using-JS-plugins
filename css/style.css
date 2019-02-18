@@ -76,3 +76,10 @@ body {
   height: 20px;
   background: #333;
 }
+
+#map {
+  width: 100%;
+  height: calc(50vh - 20px);
+  background-color: grey;
+}
+/*# sourceMappingURL=style.css.map */

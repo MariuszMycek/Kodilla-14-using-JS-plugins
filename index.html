@@ -13,6 +13,10 @@
     <div class="main-carousel" id="results"></div>
     <div class="progress-bar"></div>
 
+    <!--The div element for the map -->
+
+    <div id="map"></div>
+
     <!-- Mustache template -->
 
     <script id="template-slide" type="x-tmpl-mustache">
@@ -29,42 +33,46 @@
           </div>
         </div>
       </div>
-      
     </script>
 
     <!-- Array with data objects for Mustache template -->
-    
+
     <script>
       var slideData = [
         {
           id: "Alpine-forest",
           image: "assets/images/las1.jpg",
           title: "Alpine Forest",
-          description: "<p>a lot of fresh air</p>"
+          description: "<p>a lot of fresh air</p>",
+          cords: { lat: 46.906, lng: 9.66 }
         },
         {
           id: "Bieszczady",
           image: "assets/images/las2.jpg",
           title: "Bieszczady",
-          description: "<p>wild and beautiful</p>"
+          description: "<p>wild and beautiful</p>",
+          cords: { lat: 49.099, lng: 22.711 }
         },
         {
           id: "Romanian-Carpathians",
           image: "assets/images/las3.jpg",
           title: "Romanian Carpathians",
-          description: "<p>home of Dracula</p>"
+          description: "<p>home of Dracula</p>",
+          cords: { lat: 46.602, lng: 24.242 }
         },
         {
           id: "Pyrenees",
           image: "assets/images/las4.jpg",
           title: "Pyrenees",
-          description: "<p>spanish mountains</p>"
+          description: "<p>spanish mountains</p>",
+          cords: { lat: 42.681, lng: 0.993 }
         },
         {
           id: "Tatras",
           image: "assets/images/las5.jpg",
           title: "Polish Tatras",
-          description: "<p>bear? what bear?...</p>"
+          description: "<p>bear? what bear?...</p>",
+          cords: { lat: 49.198, lng: 20.068 }
         }
       ];
     </script>
@@ -73,5 +81,10 @@
     <script src="vendor/hash.js"></script>
     <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz68_O9_l56n5S17TQob-Zt7Vjh8CZt1U&callback=initMap"
+    ></script>
   </body>
 </html>

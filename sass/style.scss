@@ -26,7 +26,6 @@ body {
     @include breakpoint (md) {
         bottom: 50px;
         max-width: 1200px;
-
     }
 }
 
@@ -34,7 +33,6 @@ body {
     margin: 0 15px;
     color: white;
     text-shadow: 1px 1px 4px #000;
-    
     @include breakpoint (md) {
         margin: 0 35px;
     }
@@ -65,4 +63,10 @@ body {
     width: 0;
     height: 20px;
     background: #333;
+}
+
+#map {
+    width: 100%;
+    height: calc(50vh - 20px);
+    background-color: grey;
 }
