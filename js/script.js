@@ -63,6 +63,7 @@ window.initMap = function() {
       mapCenterOnMarker = false; // Center on marker disabled
 
       flkty.selectCell(document.getElementsByClassName("carousel-cell")[i]);
+      mapCenterOnMarker = true;
     });
   }
 
